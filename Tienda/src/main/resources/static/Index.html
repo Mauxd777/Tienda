@@ -5,22 +5,53 @@
     <title>Ejemplo Web</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Index.css">
 </head>
 
-<body style="background: black">
+<body>
+    <div class="block">
+        <h1>BLOQUE</h1>
+    </div>
+    <div class="static">Esto es estatico </div>
 
-    <!-- Heading -->
+    <div class="relative">
+        Esto es relativo
+        <div class="absolute">Esto es absoluto</div>
+    </div>
 
-    <h1 style="color: greenyellow">Hola Mundo</h1>
-    <h2 style="color: greenyellow">Hola Mundo</h2>
-    <h3 style="color: greenyellow">Hola Mundo</h3>
-    <!-- Paragraph -->
-    <p style="color: greenyellow">Hoy vamos a programar nuestra pagina web</p>
+    <div class="absolute">Esto es absoluto111</div>
+
+    <div class="fixed">Esto es fixed</div>
 
 
-    <!-- Unordered list -->
 
-    <ul style="color: greenyellow">
+
+
+
+
+
+
+    <div>
+        <!--  cuadno no se puede usar en otros casos  -->
+        <h1>Hola Mundo</h1>
+        <h2>Hola Mundo</h2>
+        <h3>Valeria</h3>
+    </div>
+    <article>
+        <!--  puede estar en otro pagina ya que es informacion independiente a la pagina en si -->
+        <h2>aaa</h2>
+        <h3>aa</h3>
+    </article>
+    <section>
+        <!--  se sua para informacion de la apgia  -->
+        <h2>bb</h2>
+        <h3>bb</h3>
+    </section>
+
+    <p>Hoy vamos a programar nuestra pagina web</p>
+
+    <ul>
+        <!--  No tiene orden   -->
         <li>First</li>
         <li>Second</li>
         <li>Third</li>
@@ -28,7 +59,7 @@
 
     <!-- ordered list -->
 
-    <ol style="color: greenyellow" type="A">
+    <ol type="A">
         <!-- con el type="" se indica como se ven las enumeraciones dentro de las etiquetas -->
         <li>Azucar</li>
         <li>Arroz</li>
@@ -39,12 +70,14 @@
     <!-- HREF hace que se haga un link hacia alguna URL -->
 
     <!-- href nos diirige a un sitio Web -->
-    <h1 style="color: greenyellow">Mis repositorios</h1>
-    <a style="color: greenyellow" href="https://github.com/Mauxd777/Tienda">My Git Hub</a>
+    <h1>Mis repositorios</h1>
+    <a href="https://github.com/Mauxd777/Tienda">My Git Hub</a>
     <br>
 
-    <img src="../Img/Hacker.png" style="height: 500px; width:500px ; margin-left: 35%; margin-bottom: 600px;">
+    <a href="Home.html">Home</a>
 
+    <!-- ><img src="../Img/Hacker.png" style="height: 500px; width:500px ; margin-left: 35%; margin-bottom: 600px;">
+-->
 </body>
 
 <footer>

@@ -1,0 +1,44 @@
+/*
+
+
+*/
+.block {
+    background-color: rgb(167, 93, 236);
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 20px solid blue;
+    box-sizing: border-box;
+}
+
+.static {
+    position: static;
+    border: 3px solid rgb(0, 255, 26);
+    top: 400px;
+    left: 50px;
+}
+
+.relative {
+    position: relative;
+    border: 3px solid rgb(255, 242, 0);
+    width: 200px;
+    height: 200px;
+    top: 400px;
+    left: 500px;
+}
+
+.absolute {
+    position: absolute;
+    border: 3px solid rgb(255, 0, 238);
+    top: 200px;
+    left: 100px;
+
+    
+}
+
+.fixed {
+    position: fixed;
+    border: 3px solid rgb(51, 0, 255);
+    top: 200px;
+    left: 100px;
+}
