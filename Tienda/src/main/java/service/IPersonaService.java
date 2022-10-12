@@ -4,10 +4,13 @@
  */
 package service;
 
-/**
- *
- * @author Sebas
- */
+import java.util.List;
+import entity.Persona;
+
 public interface IPersonaService {
-    
+
+    public List<Persona> getAllPersona();
+    public Persona getPersonaById (long id);
+    public void savePersona (Persona persona);
+    public void delet (long id);
 }
