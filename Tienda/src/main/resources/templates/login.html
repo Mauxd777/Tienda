@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://ww.thymealf.org"
+      xmlns:sec="http://thymealf.org/extras/spring-security">
+    <head th:replace="Plantilla/Template::head">
+        <title>Login</title>
+    </head>
+
+    <body>
+        <header th:replace="Plantilla/Template::header"></header>
+
+        <div  class="container" >
+            <div style="width: 600px;margin-left: auto;margin-right: auto;margin-top: 24px;padding: 24px;">
+                <div class="card">
+                    <div class="card-header">
+                        <i>please Login</i>
+                    </div>
+                    <div class="card-block" style="padding: 24px;">
+                        <form name="f" th:action="@{/login}" method="post" >
+                            <fieldset>
+                                <div th:if="${param.error}" class="alert alert-danger">
+                                    Invalid Username and Password
+                                </div>
+                                <div th:if="${param.error}" class="alert alert-danger">
+                                    You have bee logged out
+                                </div>
+                                <!-- Login cotrols -->
+                                <div class="from-group">
+                                    <label for="txtUsername">Username</label>
+                                    <input type="text"  class="from-control" id="username" name="username"
+                                           placeholder="Username">
+                                </div>
+                                <div class="from-group">
+                                    <label for="txtPassword">Username</label>
+                                    <input type="password"  class="from-control" id="password" name="password"
+                                           placeholder="password">
+                                </div>
+                                <div class="from-check">
+                                    <input type="checkbox"  class="from-check-input" id="checkRememberMe" name="checkRememberMe">
+                                    <label class="from-check-input" for="checkRememberMe">Remember me?</label>
+                                </div>
+                                <!-- Login button -->
+                                <div class="form-actions" style="margin-top: 12px;">
+                                    <button type="submit" class="btn btn-success">Login in </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer th:replace="Plantilla/Template::footer" ></footer>
+</html>

@@ -22,7 +22,8 @@ public class PersonaController {
 
     @Autowired
     private IPaisService paisService;
-
+    
+    
     @GetMapping("/persona")
     public String index(Model model) {
         List<Persona> listaPersona = personaService.getAllPersona();
