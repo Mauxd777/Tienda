@@ -7,6 +7,7 @@ com\tienda\service\PaisService.class
 com\tienda\SecurityConfig.class
 com\tienda\TiendaApplication.class
 com\tienda\repository\PersonaRepository.class
+com\tienda\controller\UserController.class
 com\tienda\AppAuthenticationSuccessHandler.class
 com\tienda\entity\Pais.class
 com\tienda\WebConfig.class

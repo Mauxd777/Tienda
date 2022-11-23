@@ -14,13 +14,12 @@ public class UserPrincipal implements UserDetails {
     private Persona persona;
 
     public UserPrincipal(Persona persona) {
-        this.persona = this.persona;
+        this.persona = persona;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();
-
         this.persona.getPermissionList().forEach(
                 P -> {
                     GrantedAuthority authority = new SimpleGrantedAuthority(P);
