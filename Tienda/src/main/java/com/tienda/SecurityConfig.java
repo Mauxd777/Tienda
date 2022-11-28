@@ -43,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
     
     @Bean
-    AuthenticationSuccessHandler authenticationSuccessHandler() {
+    public AuthenticationSuccessHandler AppAuthenticationSuccessHandler() {
         return new AppAuthenticationSuccessHandler();
     }
     
@@ -58,16 +58,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
-//        http.httpBasic().and().authorizeRequests()
-//                .antMatchers("/persona","/login","/PersonasN")
-//                .hasRole("ADMIN")
-//                .antMatchers("/persona","/","/login")
-//                .hasAnyRole("USER","VENDEDOR","ADMIN")
-//                .anyRequest().authenticated()
-//                .and()
-//                .formLogin()
-//                .loginPage("/login").permitAll().defaultSuccessUrl("/persona",true);
+        http.authorizeRequests()
+                .antMatchers("/persona","/login","/personaN","/save")
+                .hasRole("ADMIN")
+                .antMatchers("/persona","/","/login")
+                .hasAnyRole("USER","VENDEDOR","ADMIN")
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login").permitAll().defaultSuccessUrl("/persona",true);
                 
                 
     }
